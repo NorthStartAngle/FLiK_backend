@@ -5,6 +5,5 @@ deployment:
     - /bin/cp -R . $DEPLOYMENT_TARGET
     - cd $DEPLOYMENT_TARGET
     - /usr/local/bin/npm install
-    - /usr/local/bin/npm run build
-    - /usr/local/bin/pm2 restart all
+    - /usr/local/bin/npm run strict-build
     - /usr/local/bin/pm2 restart all
