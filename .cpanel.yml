@@ -7,3 +7,4 @@ deployment:
     - /usr/local/bin/npm install
     - /usr/local/bin/npm run build
     - /usr/local/bin/pm2 restart all
+    - /usr/local/bin/pm2 start index.js
