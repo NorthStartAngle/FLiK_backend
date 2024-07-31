@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>user login..</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../library/css/styles.css" />
+        <link rel="stylesheet" href="../../library/css/w3.css">
+		<link rel="stylesheet" href="../../library/css/login.css">
+		<script src = "../../library/js/jquery-1.12.3.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <% if (typeof toolbar != 'undefined') { %>
+                <%- include('header.ejs'), {toolbar: toolbar} %>
+            <% } else { %>
+                <%- include('header.ejs')%>
+            <% } %>
+        </header>
+        <main style="padding-top: 100px;">
+            <h2  class="title">Enter your account info in below form</h2>
+			<div class="container">
+				<form action="/userlogin" method="POST">
+					<div class="row">
+						<div class="col-25">
+						  <label for="username">Email Address</label>
+						</div>
+						<div class="col-75">
+						  <input type="text" id="username" name="email" placeholder="anon@mail.com" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-25">
+						  <label for="password">Password</label>
+						</div>
+						<div class="col-75">
+						  <input type="password" id="password" name="pwd"  minlength="6" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-25">
+						  <label for="account_kind">Mode</label>
+						</div>
+						<div class="col-75">
+						  <select id="account_kind" name="mode">
+							<option value="login">SignIn</option>
+							<option value="logout">SignUp</option>
+						  </select>
+						</div>
+					</div>
+ 
+					<br>
+					<div class="row">
+						<div class="flex_horizontal">
+							<input type="submit" value="Apply">
+							<input type="button" value="Cancel">
+						</div>
+					</div>
+				</form>
+			</div>
+        </main>
+        <%- include('footer.ejs') %>
+    </body>
+	<script src = "../../js/login.js"></script>
+</html>

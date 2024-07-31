@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../library/css/w3.css">
+        <link rel="stylesheet" href="../../css/showResetPage.css">
+        <script src = "../../library/js/jquery-1.12.3.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <% if (typeof toolbar != 'undefined') { %>
+                <%- include('header.ejs'), {toolbar: toolbar} %>
+            <% } else { %>
+                <%- include('header.ejs')%>
+            <% } %>
+        </header>
+        <main>
+            <form action="" id="resetForm" >  
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pwd">New Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="pwd" name="newpwd" placeholder="at least 6 characters..">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="confirmpwd">Confirm again:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="confirmpwd" name="newpwd" placeholder="at least 6 characters..">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div> 
+            </form>
+            <div class ="lazy" id="waitIndicator"></div>
+        </main>
+        <%- include('footer.ejs') %>
+    </body>
+    <script src = "../../js/resettingpwd.js"></script>
+</html>

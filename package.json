@@ -1,0 +1,28 @@
+{
+  "name": "filk-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "nodemon -e js,ejs"
+  },
+  "author": "jin",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.22.0",
+    "base64-stream": "^1.0.0",
+    "basic-ftp": "^5.0.3",
+    "body-parser": "^1.20.2",
+    "chrome-remote-interface": "^0.32.2",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "ftp-client": "^0.2.2",
+    "multer": "^1.4.5-lts.1",
+    "pug": "^3.0.2"
+  }
+}
